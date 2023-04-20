@@ -1,17 +1,20 @@
 import React from "react";
-import { AboutAuthor, ArtProjects, GameProjects, Header } from "../components";
+import { AboutAuthor, ArtProjects, GameProjects } from "../components";
+import { Container } from "reactstrap";
+import Header from "../components/homepage/header/index";
+import Navigation from "../components/navigation";
+import IPageProps from "../interfaces/page";
 
-export function Home() {
+export const Home: React.FunctionComponent<IPageProps> = (props) => {
   return (
-    <div className="h-screen w-screen bg-slate-200">
-      <div>
-        <Header />
-      </div>
-      <div className="z-10 my-10">
-        <GameProjects />
+    <Container fluid className="p-0">
+      <Navigation />
+      <Header title="Andrew Thompson Art" headline="Art comes in many forms" />
+      <Container>
         <ArtProjects />
+        <GameProjects />
         <AboutAuthor />
-      </div>
-    </div>
+      </Container>
+    </Container>
   );
-}
+};
