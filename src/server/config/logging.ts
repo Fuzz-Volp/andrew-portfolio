@@ -4,13 +4,13 @@ const DEFAULT_NAMESPACE = "Server";
 const info = (message: any, namespace?: string) => {
   if (typeof message === "string") {
     console.log(
-      chalk.blueBright(
+      chalk.cyanBright(
         `[${getDate()}] [${namespace || DEFAULT_NAMESPACE}] [INFO] ${message}`
       )
     );
   } else {
     console.log(
-      chalk.blue(
+      chalk.cyan(
         `[${getDate()}] [${namespace || DEFAULT_NAMESPACE}] [INFO]`,
         message
       )
@@ -21,13 +21,13 @@ const info = (message: any, namespace?: string) => {
 const warn = (message: any, namespace?: string) => {
   if (typeof message === "string") {
     console.log(
-      chalk.yellow(
+      chalk.yellowBright(
         `[${getDate()}] [${namespace || DEFAULT_NAMESPACE}] [WARN] ${message}`
       )
     );
   } else {
     console.log(
-      chalk.yellowBright(
+      chalk.yellow(
         `[${getDate()}] [${namespace || DEFAULT_NAMESPACE}] [WARN]`,
         message
       )
@@ -38,13 +38,13 @@ const warn = (message: any, namespace?: string) => {
 const error = (message: any, namespace?: string) => {
   if (typeof message === "string") {
     console.log(
-      chalk.red(
+      chalk.redBright(
         `[${getDate()}] [${namespace || DEFAULT_NAMESPACE}] [ERROR] ${message}`
       )
     );
   } else {
     console.log(
-      chalk.redBright(
+      chalk.red(
         `[${getDate()}] [${namespace || DEFAULT_NAMESPACE}] [ERROR]`,
         message
       )
