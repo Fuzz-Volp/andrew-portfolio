@@ -3,6 +3,8 @@ dotenv.config();
 
 const MONGO_USER = process.env.MONGO_USER || "";
 const MONGO_PASSWORD = process.env.MONGO_PASSWORD || "";
+const PORT = process.env.PORT || 3001;
+const SECRET = process.env.SECRET || "";
 
 const config = {
   mongo: {
@@ -18,8 +20,9 @@ const config = {
   },
   server: {
     host: "localhost",
-    port: 5173,
+    port: PORT,
   },
+  secret: SECRET,
 };
 
 export default config;

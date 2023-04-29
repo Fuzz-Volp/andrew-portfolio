@@ -1,8 +1,9 @@
-export default interface IRoute {
+interface IRoute {
   path: string;
   name: string;
-  exact: boolean;
-  auth: boolean;
   element: any;
-  props?: any;
+  icon: React.ComponentElement;
+  exact: boolean;
 }
+
+export default { IRoute };
